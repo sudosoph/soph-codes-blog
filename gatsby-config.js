@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Soph Codes`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Sophia.`,
+      summary: `Studies engineering @ Columbia. Writes about technology management & full-stack development. Mother to Rosie, adorable 2-year old Maltese pup.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A blog about coding and the business of tech.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      github: `sudosoph`,
     },
   },
   plugins: [
@@ -60,8 +60,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
