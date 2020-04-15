@@ -3,7 +3,7 @@ module.exports = {
     title: `Soph Codes`,
     author: {
       name: `Sophia.`,
-      summary: `Engineering @ Columbia. Writes about technology management & full-stack development. Mother to Rosie, adorable 2-year old Maltese pup.`,
+      summary: `Engineering @ Columbia. I write about technology management & full-stack development. Mother to Rosie, adorable 2-year old Maltese pup.`,
     },
     description: `A blog about coding and the business of tech.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,

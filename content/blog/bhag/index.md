@@ -1,10 +1,10 @@
 ---
 title: Big Hairy Audacious Goals
 date: "2020-04-13"
-description: "In my first post, I outline my learning goals for the year, (including coding and tech career paths) and explaining why I created this blog."
+description: In my first post, I outline my learning goals for the year (including coding and tech career paths) and explaining why I created this blog.
 ---
 
-This is my first post on Soph Codes. My big hairy audacious goal is to participate in the [#100DaysOfCode challenge](https://www.100daysofcode.com/) to hone my Python skills, first and foremost. I will then:
+This is my first post on Soph Codes. To use the term popularized by [Jim Collins](https://www.jimcollins.com/concepts/bhag.html), my big hairy audacious goal is to participate in the [#100DaysOfCode challenge](https://www.100daysofcode.com/) to hone my Python skills, first and foremost. I will then:
 - build a set of Python projects
 - implement data structures and algorithms in Python
 - re-learn React with Hooks to build full-stack applications
