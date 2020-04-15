@@ -6,9 +6,9 @@ description: "A simple look at abstraction concepts through the Fibonacci exampl
 
 Abstraction is a wonderful programming concept because it saves us a lot of time via the use of **parameters, scoping, and recursion**... In other words, it is the perfect programming principle for the lazy programmer!
 
-While Bertrand Russell [praised idleness](https://harpers.org/archive/1932/10/in-praise-of-idleness/), it is second only to laziness as a desirable quality in a programmer, and dare I say, virtue! They don't do any unnecessary work and instead seek to make their programs more abstract as a result.
+While Bertrand Russell [praised idleness](https://harpers.org/archive/1932/10/in-praise-of-idleness/), it is second only to laziness as a desirable quality in a programmer, and dare I say, virtue! We don't do any unnecessary work and instead seek to make our programs more abstract as a result.
 
-Let's use the example of Fibonacci numbers:
+##Let's use the example of Fibonacci numbers:
 ```shell
 fibs = [0, 1]
 for i in range(8):
