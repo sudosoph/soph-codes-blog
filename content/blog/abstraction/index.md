@@ -35,3 +35,5 @@ In an application where you compute the frequency of all the words used on sever
 num = input("How many numbers do you want? ")
 print(fibs(num))
 ```
+
+Reading the number and printing out the result is spelled out, as it is specific to this program, but the Fibonacci function itself is written abstractly and we call it only when we need its functionality.
