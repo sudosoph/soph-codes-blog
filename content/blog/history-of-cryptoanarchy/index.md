@@ -1,3 +1,4 @@
+---
 title: A History of Cryptoanarchy
 date: "2020-04-18"
 description: Overview of the philosophy and technologies predating Bitcoin

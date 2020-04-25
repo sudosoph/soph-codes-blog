@@ -1,7 +1,7 @@
 ---
 title: Abstraction
 date: "2020-04-14"
-description: A concise look at abstraction concepts with corresponding code examples.
+description: A concise look at abstraction fundamentals with corresponding code examples, including parameteres, scoping, and recursion.
 ---
 
 **Abstraction** is the art of hiding unnecessary details. It is a wonderful programming concept because it saves us a lot of time via the use of **parameters, scoping, and recursion**... 

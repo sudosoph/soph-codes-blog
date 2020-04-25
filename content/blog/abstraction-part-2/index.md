@@ -1,16 +1,17 @@
+---
 title: Abstraction, Part 2
 date: "2020-04-24"
-description: A concise look at abstraction principles with corresponding code examples: polymorphism, encapsulation, methods and attributes, subclasses and superclasses, and inheritance.
+description: A concise look at abstraction principles with corresponding code examples, from polymorphism, encapsulation, methods and attributes, subclasses and superclasses, and inheritance.
 ---
 
-Like C++, Java, Smalltalk, and many others, Python is an object-oriented language. Python, however, is multi-paradigmatic, meaning that you can choose the paradigm best suited for the task, but its central paradigm is ***object-oriented programming***. The term _object_ refers to a collection of data (attributes) with a set of methods for accessing and modifying that data.  We discussed global variables and functions in [Part 1](https://www.section.io/engineering-education/abstraction-concepts/), but here we describe abstraction concepts relevant to objects.
+Like C++, Java, Smalltalk, and many others, Python is an object-oriented language. Python, however, is multi-paradigmatic, meaning that you can choose the paradigm best suited for the task, but its central paradigm is ***object-oriented programming***. The term _object_ refers to a collection of data (attributes) with a set of methods for accessing and modifying that data.  We discussed global variables and functions in [Part 1](../../abstraction), but here we describe abstraction concepts relevant to objects.
 
 ## Objects and Classes
 **Objects** consist of attributes and methods. **Attributes** are variables that are part of an object, and **methods** are somewhat like functions stored in an attribute.
 
 ***Object-oriented design*** is useful when thinking of the relationships classes and objects might have with one another and related functionality. It is appropriate in cases where implementing patterns leading to software reuse. In order to plan out what classes and methods to use, it may be helpful to think of the description of the problem and relate nouns with possible classes, verbs with methods, and adjectives with attributes.
 
-**Classes** are a set of objects. Just as with namespace definitions in [Part 1](https://www.section.io/engineering-education/abstraction-concepts/), and class namespaces refer to the special namespace that all the code in the ```class``` statement will execute.
+**Classes** are a set of objects. Just as with namespace definitions in [Part 1](../../abstraction), and class namespaces refer to the special namespace that all the code in the ```class``` statement will execute.
 
 ## Inheritance
 
@@ -83,7 +84,7 @@ True
 
 One caveat is that while any instances of a subclass of an abstract class we register will return ```True``` as an instance, it will not have its attribute ```echo```, and this is in keeping with ***duck typing*** (the type or the class of an object is less important than the methods it defines).
 
-![Image of Duck Typing Quote](https://www.thebraziltimes.com/photos/29/19/52/2919525-B.jpg)
+![Image of Duck Typing Quote](duck.jpg)
 
 ## Polymorphism
 
