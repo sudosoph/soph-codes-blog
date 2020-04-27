@@ -1,107 +1,72 @@
 ---
-title: Binary Search
-date: "2020-04-15"
+title: All About Binary Search
+date: "2020-04-27"
 description: Walk-through of a simple Binary Search implementation in Python and discussion of binary search time and space complexity.
 ---
 
-A binary search tree is an algorithm that serves as an example of recursion in practice.
+A binary search tree is an algorithm that finds the position of a target value in a _sorted_ list.
 
-- Standard implementation in ```bisect``` module
+## Process
+1. Compare target to middle number, since the last is sorted, this tells us whether the target will be in the left or right half of the list.
+2. We now ignore the other half of the list, seeing as we have divided the problem in half.
+3. Repeat the same process, with the middle of the new half of the list we are using, until finding the target value or not finding it in the list.
 
-## Halving Guess Games
+## Benefits
+- Always reduces complexity of linear search from O(log(N)) to O(log(N)) in sorted list
+	- This is because search interval decreases by a power of two ech time (halving the lists). Includes cost of insert(), delete(), and lookup()
+	- Space complexity is O(1), meaning it requires constant time to perform operations, as we just need to store three values (upper, middle, and lower bounds)
+- More efficient for searching for specific target from large input
+	- We have ordering of keys stored in trees
+- Simple to program for lists
+- Can use BST to do range queries (finding values between x and y values) and implement order statistics seeing as the list is sorted
 
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
+**Fun fact:** You could search all the names in the world (written in order) and find a specific name in a maximum of [35 iterations](https://www.hackerearth.com/practice/algorithms/searching/binary-search/tutorial/)
 
-- This however showed weasel
-- Well uncritical so misled
-  - this is very interesting
-- Goodness much until that fluid owl
+## Disadvantages
+- It only works on sorted lists that are kept sorted
+	- More complicated to implement than a linear search, requires three-way update of low and high index and potentially an additional check if target wasn't found
+	- Overkill for smaller lists
+- The recursive implementation requires more stack space
+- Loss of efficiency if the list does not support random-access
+- Using interpolating search to predict where to start searching when the elements are distributed evenly gets us to our destination more quickly than a binary search tree, i.e. O(log(log(N))) instead of O(log(N))
+	- Improvement over Binary Search for sorted arrays that are uniformly distributed (sorted but unindexed on-disk datasets)
+	- However, when list size increases exponentially, interpolation search time complexity is O(log(N)), the worst case, as it has to go to different locations according to the value of what is being searched
 
-When she reached the first hills of the **Italic Mountains**, she had a last
-view back on the skyline of her hometown _Bookmarksgrove_, the headline of
-[Alphabet Village](http://google.com) and the subline of her own road, the Line
-Lane. Pityful a rhetoric question ran over her cheek, then she continued her
-way. On her way she met a copy.
+## Implementation
 
-### Overlaid the jeepers uselessly much excluding
+```shell
+def binary_search(target, input):
+    """See if target appears in input"""
+    # We think of low and high as "walls" around
+    # the possible positions of our target so by -1 below we mean
+    # to start our wall "to the left" of the 0th index
+    # (we *don't* mean "the last index")
+    low = -1
+    high = len(input)
 
-But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with
-[Longe and Parole](http://google.com) and dragged her into their agency, where
-they abused her for their projects again and again. And if she hasn’t been
-rewritten, then they are still using her.
+    # If there isn't at least 1 index between low index and high index,
+    # we've run out of guesses and the number must not be present
+    while low + 1 < high:
+        # Find the index ~halfway between the low index and high index
+        # We use integer division, so we'll never get a "half index"
+        distance = high - low
+        middle = distance // 2
+        guess_index = low + middle
 
-> Far far away, behind the word mountains, far from the countries Vokalia and
-> Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-> right at the coast of the Semantics, a large language ocean.
+        guess_value = input[guess_index]
+        if guess_value == target:
+            return True
 
-It is a paradisematic country, in which roasted parts of sentences fly into your
-mouth. Even the all-powerful Pointing has no control about the blind texts it is
-an almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar.
+        if guess_value > target:
+            # Target is to the left, so move high index to the left
+            high = guess_index
+        else:
+            # Target is to the right, so move low index to the right
+            low = guess_index
 
-### According a funnily until pre-set or arrogant well cheerful
+    return False
+```
 
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
+## Python-Specific Modules
 
-1.  So baboon this
-2.  Mounted militant weasel gregariously admonishingly straightly hey
-3.  Dear foresaw hungry and much some overhung
-4.  Rash opossum less because less some amid besides yikes jeepers frenetic
-    impassive fruitlessly shut
 
-When she reached the first hills of the Italic Mountains, she had a last view
-back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
-Village and the subline of her own road, the Line Lane. Pityful a rhetoric
-question ran over her cheek, then she continued her way. On her way she met a
-copy.
-
-> The copy warned the Little Blind Text, that where it came from it would have
-> been rewritten a thousand times and everything that was left from its origin
-> would be the word "and" and the Little Blind Text should turn around and
-> return to its own, safe country.
-
-But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
-and dragged her into their agency, where they abused her for their projects
-again and again. And if she hasn’t been rewritten, then they are still using
-her. Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts.
-
-#### Silent delightfully including because before one up barring chameleon
-
-Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-large language ocean. A small river named Duden flows by their place and
-supplies it with the necessary regelialia. It is a paradisematic country, in
-which roasted parts of sentences fly into your mouth.
-
-Even the all-powerful Pointing has no control about the blind texts it is an
-almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
-advised her not to do so, because there were thousands of bad Commas, wild
-Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
-
-##### Wherever far wow thus a squirrel raccoon jeez jaguar this from along
-
-She packed her seven versalia, put her initial into the belt and made herself on
-the way. When she reached the first hills of the Italic Mountains, she had a
-last view back on the skyline of her hometown Bookmarksgrove, the headline of
-Alphabet Village and the subline of her own road, the Line Lane. Pityful a
-rhetoric question ran over her cheek, then she continued her way. On her way she
-met a copy.
-
-###### Slapped cozy a that lightheartedly and far
-
-The copy warned the Little Blind Text, that where it came from it would have
-been rewritten a thousand times and everything that was left from its origin
-would be the word "and" and the Little Blind Text should turn around and return
-to its own, safe country. But nothing the copy said could convince her and so it
-didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
-with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again.
