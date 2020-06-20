@@ -23,6 +23,12 @@ By slowly enlisting the trust of Patty, the hyper-organized Director of IT Suppo
 
 ## Lessons Learned
 
+> ### Agile means you not only have shippable code, but a working environment it can deploy into.
+
+> ### DevOps is the manufacturing revolution of our age.
+
+> ### Pay down technical debt!
+
 1. What is **Devops**? 
 
 Routinely deploying hundreds or thousands of production changes per day, while preserving world-class reliability, stability, and security.
@@ -75,19 +81,13 @@ Values and philosophies that guide DevOps processes and practices:
 3. **Changes:** Generated from previous two types of work and are tracked in ticketing system (Remedy for IT Ops, JIRA or Agile planning tool for Development)
 4. **Unplanned work or recovery work:** Operational incidents and problems caused by previous types of work at expense of other planned commitments
 
-> ### Agile means you not only have shippable code, but a working environment it can deploy into.
-
-> ### DevOps is the manufacturing revolution of our age.
-
-> ### Pay down technical debt!
-
-# Recommended Books:
-- The Goal: A Process of Ongoing Improvement, by Eliyahu Goldblatt
-- The Five Dysfunctions of A Team: A Leadership Fable, by Patrick Lencioni
-- Toyota Kata: Managing People for Improvement, Adaptiveness and Superior Results, by Mike Rother
-- Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation, by David Farley and Jez Humble
-- Release It!: Design and Deploy Production-Ready Software, by Michael T. Nygard
-- Visible Ops and ITIL Service Support, by Kevin Behr and Gene Kim
-- Personal Kanban: Mapping Work | Navigating Life, by Jim Benson and Tonianne DeMaria Barry
-- Getting Things Done: The Art of Stress-Free Productivity, by David Allen
+# Recommended Reading:
+- *The Goal: A Process of Ongoing Improvement*, by Eliyahu Goldblatt
+- *The Five Dysfunctions of A Team: A Leadership Fable*, by Patrick Lencioni
+- *Toyota Kata: Managing People for Improvement, Adaptiveness and Superior Results*, by Mike Rother
+- *Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation*, by David Farley and Jez Humble
+- *Release It!: Design and Deploy Production-Ready Software*, by Michael T. Nygard
+- *Visible Ops and ITIL Service Support*, by Kevin Behr and Gene Kim
+- *Personal Kanban: Mapping Work | Navigating Life*, by Jim Benson and Tonianne DeMaria Barry
+- *Getting Things Done: The Art of Stress-Free Productivity*, by David Allen
 
