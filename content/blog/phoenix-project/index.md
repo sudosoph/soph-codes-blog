@@ -1,5 +1,5 @@
 ---
-title: The Phoenix Project Review
+title: "[📖 Book Notes📚] The Phoenix Project, by Gene Kim"
 date: "2020-06-20"
 description: Review and lessons learned for the DevOps and IT novel
 ---
