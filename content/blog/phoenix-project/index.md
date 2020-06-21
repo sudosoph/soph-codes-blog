@@ -9,7 +9,7 @@ description: Review and lessons learned for the DevOps and IT novel
 
 *The Phoenix Project* was recommended to me by [Chris Kelly](https://ckdake.com/books.html) and Ben Sheldon, two mentors I met through [Out of Office Hours](https://www.outofofficehours.com/) on the same week! Naturally, this piqued my curiosity and made me want to read the book even more. As it turns out, it is a novel that contains gems on Devops, IT operations, product management, and information security all in one. 
 
-While books like *The Lean Startup* and *The Toyota Way* explain the iterative model that can be gleaned from Japanese manufacturing, seeing this process applied to software through the lens of the sometimes eccentric but always overwhelmed workers of Parts Unlimited was an entertaining and daunting exercise for the reader! 
+Books like *The Lean Startup* and *The Toyota Way* explain the iterative model that can be gleaned from Japanese manufacturing, but seeing this process applied to software through the lens of the sometimes eccentric but always overwhelmed workers of Parts Unlimited was an entertaining and daunting exercise for the reader! 
 
 While parts of the book felt like the characters could be interchangeable in delivering a fundamental business lesson, I still felt I learned a lot about how departments can prevent dysfunctional communication and successfully collaborate with one another towards a common goals. Fellow fans of cult office comedies revolving around workplace bureaucracies like *Office Space* (1999) or *The IT Crowd* (2006-2013) will love this book.
 
