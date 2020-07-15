@@ -1,5 +1,5 @@
 ---
-title: "[📖 Book Notes📚] The Phoenix Project, by Gene Kim"
+title: "📚 The Phoenix Project, by Gene Kim"
 date: "2020-06-20"
 description: Review and lessons learned for the DevOps and IT novel
 ---
@@ -90,4 +90,5 @@ Values and philosophies that guide DevOps processes and practices:
 - *Visible Ops and ITIL Service Support*, by Kevin Behr and Gene Kim
 - *Personal Kanban: Mapping Work | Navigating Life*, by Jim Benson and Tonianne DeMaria Barry
 - *Getting Things Done: The Art of Stress-Free Productivity*, by David Allen
+- *Kanban: Successful Evolutionary Change for Your Technology Business*, by David J. Anderson
 

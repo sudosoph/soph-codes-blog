@@ -1,5 +1,5 @@
 ---
-title: "[📖 Book Notes📚] Competing Against Luck, by Clayton Christensen"
+title: "📚 Competing Against Luck, by Clayton Christensen"
 date: "2020-06-20"
 description: Outline and lessons learned for Competing Against Luck
 ---

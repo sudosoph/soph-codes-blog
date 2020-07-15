@@ -1,5 +1,5 @@
 ---
-title: "[📖 Book Notes📚] The Mom Test, by Rob Fitzpatrick"
+title: "📚 The Mom Test, by Rob Fitzpatrick"
 date: "2020-06-20"
 description: Outline and lessons learned for The Mom Test
 ---

@@ -6,20 +6,18 @@ description: How to manually throw exceptions in Python and using assertions for
 
 > “It’s easier to ask forgiveness than permission.” - Grace Hopper
 
-Distinguish between normal course of events and something exceptional, such as errors (dividing by zero) or something you might not expect to handle
+Errors come in two forms: syntax errors and [exceptions](https://docs.python.org/3/tutorial/errors.html).
 
-Using conditionals to check for every possible event is inefficient and inflexible, compromising readability
-
-Python offers powerful exception-handling mechanisms
+While syntax errors occur when the Python can't parse a line of code, raising exceptions allows us to distinguish between regular events and something exceptional, such as errors (dividing by zero) or something you might not expect to handle. Using conditionals to check for every possible event is not only inefficient and inflexible, it compromises readability. Fortunately, Python offers powerful exception-handling mechanisms to resolve this.
 
 **Exception**: Exception objects represent exceptional conditions
 	- When Python encounters an error, it _raises_ an exception
-	- If exception object is not _caught_, the program terminates with a **traceback** (error message)
+	- If the exception object is not _caught_, the program terminates with a **traceback** (error message)
 
-The benefit is that rather than just getting error messages, you can trap the error and do something instead of letting the whole program fail.
+The benefit of using exceptions is that rather than just getting error messages, you can trap the error and do something instead of letting the whole program fail.
 
 ### raise Statement
-Use ```raise``` with argument that is either a class (subclasses ```Exception```) or an instance
+Use ```raise``` with an argument that is either a class (subclasses ```Exception```) or an instance
 - Using a class creates an instance automatically
 
 ```shell
@@ -48,26 +46,24 @@ ArithmeticError
 9. ```ValueError```: built-in operation or function applied to object of correct type but with inappropriate value
 10. ```ZeroDivisionError```: second argument of division or modulo operation is 0
 
+A more complete list is available in the official [Python documentation](https://docs.python.org/3/library/exceptions.html).
+
 #### When do you create custom exception classes?
 
 Sometimes an error message is insufficient, so you can selectively handle certain types of exceptions based on their class. 
 
-Creating an exception class involves subclassing Exception or any of its subclasses in the form:
+Creating an exception class involves subclassing ```Exception``` or any of its subclasses in the form:
 
 ```shell
 class NewCustomException(Exception): pass
 ```
 ### Catching Exceptions
 
-It's possible to catch exceptions using a ```try/except``` statement. 
+It's possible to catch exceptions using a [```try/except``` statement](https://www.educative.io/edpresso/how-is-tryexcept-used-in-python).
 
-Exceptions not caught where a function is called will "bubble up" (or propagate) to the top level of the program.
+Exceptions not caught where a function is called will propagate to the top level of the program. If you called an exception already but want to raise it again, you can call ```raise``` without any arguments or supply the exception explicitly.
 
-If you called an exception already but want to raise it again, you can call ```raise``` without any arguments or supply the exception explicitly.
-
-In an interactive session with a user, it may be useful to create a class, whereas used internally in a program, raising an exception is better.
-
-When wanting to raise different exception, exception that took you into ```except``` will be stored as context for exception and be part of final error message:
+In an interactive session with a user, it is useful to create a class, whereas used internally in a program, raising an exception is better. When raising a different exception, the exception that took you into ```except``` will be stored as context and be part of final error message:
 
 ```shell
 >>> try:
@@ -95,7 +91,9 @@ except ZeroDivisionError:
     print("The second number can't be zero!")
 ```
 
-Entering a nonnumeric value will prompt another exception to occur, but because the ```except``` clause only looked for ```ZeroDivisionError```, this one slipped through and crashed the program. Adding another exception solves this:
+Entering a nonnumeric value will prompt another exception to occur, but because the ```except``` clause only looked for ```ZeroDivisionError```, this one slipped through and crashed the program. 
+
+Adding another exception solves this:
 
 ```shell
 try:
@@ -110,7 +108,7 @@ except TypeError:
 
 Using an ```if``` statement here would be more difficult because you would have to define what kind of value can be used in division, while using exception handling doesn't clutter the code and allows us to check for multiple errors.
 
-Specifying more than one exception type in one block can be done with a typle:
+Specifying more than one exception type in one block can be done with a tuple:
 
 ```shell
 except (ZeroDivisionError, TypeError, NameError):
@@ -135,7 +133,7 @@ Traceback (most recent call last):
 ValueError: invalid literal for int() with base 10: ''
 ```
 
-Options:
+#### Options:
 - Crash the program immediately so you can see what's wrong rather than hide exception with ```try/except``` statement that won't catch it
 - Omit the exception class from the except clause
 
@@ -166,9 +164,9 @@ while True:
     else:
         break
 ```
-The loop is broken only when no exception is raised. The program runs as long as something wrong happens by asking for new input.
+The loop is broken only when no exception is raised. The program runs as long as something wrong happens by asking for new input. How would we catch all exceptions of the Exception class by printing more informative error messages? 
 
-How would we catch all exceptions of the Exception class by printing more informative error messages? We modify our earlier code:
+We modify our earlier code:
 
 ```shell
 while True:
@@ -186,7 +184,7 @@ while True:
 
 ### finally Clause
 
-```finally``` is used to do housekeeping after a possible exception. This guarantees the ```finally``` clause is executed no matter what exceptions occur in the ```try``` clause, namely for closing files or network sockets.
+The keyword ```finally``` is used to do housekeeping after a possible exception. This guarantees the ```finally``` clause is executed no matter what exceptions occur in the ```try``` clause, namely for closing files or network sockets.
 
 ```shell
 x = None 
@@ -197,7 +195,7 @@ finally:
     del x
 ```
 
-We initialize x before the ```try``` clause so the cleanup comes before the program ends, and because if we put it within the ```try``` clause, it would never be assigned a value due to ZeroDivisionError, so you would not catch this error.
+We initialize x before the ```try``` clause so the cleanup comes before the program ends, and because if we put it within the ```try``` clause, it would never be assigned a value due to ```ZeroDivisionError```, so you would not catch this error.
 
 ### Warnings
 
